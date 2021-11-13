@@ -1,0 +1,8 @@
+env/
+__pycache__/
+instances/
+rectified_photograph_samples/
+*.csv
+*.jpg
+*.h5
+test.py
