@@ -143,6 +143,14 @@ def certain_matrix():
 
 	return M
 
+# convert 3x3 transform matrix to the 8-unit output of the PTRN.
+def out_to_matrix(out):
+	return np.concatenate((out, [1]), axis=0).reshape(3, 3)
+
+# inverse convert
+def matrix_to_out(matrix):
+	return matrix.reshape(-1)[:-1]
+
 # a function that converts a matrix to the 4 vertices
 def matrix_to_pts(matrix, size=(224, 224)):
 	M = matrix
