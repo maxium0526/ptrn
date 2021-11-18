@@ -1,9 +1,9 @@
 # the folder path of your CheXpert and CheXphoto datasets
 # e.g. your dataset is in /aaa/bbb/CheXpert-v1.0, then dataset_path='/aaa/bbb'
-dataset_path = ''
+dataset_path = '/home/max/datasets'
 
 # where is your folder that contains random images
-ms_coco_path = ''
+ms_coco_path = '/home/max/datasets/MSCOCO/test2017'
 
 img_size = (224, 224)
 

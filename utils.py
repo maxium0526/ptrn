@@ -371,8 +371,8 @@ def draw_pts(img, matrix):
 	return new
 
 def IOU(y_true, y_pred):
-	m_true = matrix_to_out(y_true)
-	m_pred = matrix_to_out(y_pred)
+	m_true = out_to_matrix(y_true)
+	m_pred = out_to_matrix(y_pred)
 
 	pts_true = matrix_to_pts(m_true, size=(224, 224))
 	pts_pred = matrix_to_pts(m_pred, size=(224, 224))
