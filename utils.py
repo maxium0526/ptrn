@@ -352,6 +352,16 @@ def apply(img, matrix, size=None):
 
 	return np.array(img)
 
+def draw_pts(img, matrix):
+	pts = matrix_to_pts(matrix)
+
+	new = np.array(img)
+	new = cv.drawContours(new, [pts.astype('int')], -1, color=(0, 255, 255), thickness=cv.FILLED)
+
+	for pt in pts:
+		new = cv.circle(new, (int(pt[0]), int(pt[1])), 9, (255, 150, 150), -1)
+	return new
+
 def IOU(y_true, y_pred):
 	m_true = np.concatenate((np.array(y_true), np.ones((1)))).reshape(3, 3)
 	m_pred = np.concatenate((np.array(y_pred), np.ones((1)))).reshape(3, 3)
