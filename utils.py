@@ -188,7 +188,7 @@ def perspective_transform(img, matrix, size=(224, 224), fillcolor=None):
 	src_pts = np.array([[0, 0],[size[0], 0],[size[0], size[1]],[0, size[1]]], dtype='float32')
 	dst_pts = matrix_to_pts(matrix, size=size)
 	M = cv.getPerspectiveTransform(dst_pts, src_pts)
-	X_SC = img.transform(size, Image.PERSPECTIVE,M.reshape(-1)[:-1], Image.BICUBIC, fillcolor=fillcolor)
+	X_SC = img.transform(size, Image.PERSPECTIVE, matrix_to_out(M), Image.BICUBIC, fillcolor=fillcolor)
 	return X_SC
 
 def random_crop(img, size=(224, 224)):
@@ -295,7 +295,7 @@ def generate_training_sample_batch(dataset_path, df_cxrs, bg_paths, batch_size=3
 		I_FB = cv.cvtColor(I_FB, cv.COLOR_RGBA2RGB)
 		# ------
 		I_FBs.append(I_FB)
-		outs.append(A.reshape(-1)[:-1])
+		outs.append(matrix_to_out(A))
 
 		# del X, I_FB, I_F
 		# if screen_synthesis is True:
@@ -342,7 +342,7 @@ def load_validation_data(dataset_path, dataset_name='CheXphoto-natural', size=(2
 
 		A = pts_to_matrix(pts, size=size)
 		imgs.append(img)
-		outs.append(A.reshape(-1)[:-1])
+		outs.append(matrix_to_out(A))
 
 	imgs = np.array(imgs).reshape(-1, *size, 3)
 	outs = np.array(outs).reshape(-1, 8)
@@ -371,8 +371,8 @@ def draw_pts(img, matrix):
 	return new
 
 def IOU(y_true, y_pred):
-	m_true = np.concatenate((np.array(y_true), np.ones((1)))).reshape(3, 3)
-	m_pred = np.concatenate((np.array(y_pred), np.ones((1)))).reshape(3, 3)
+	m_true = matrix_to_out(y_true)
+	m_pred = matrix_to_out(y_pred)
 
 	pts_true = matrix_to_pts(m_true, size=(224, 224))
 	pts_pred = matrix_to_pts(m_pred, size=(224, 224))

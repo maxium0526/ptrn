@@ -22,9 +22,9 @@ model_in = np.expand_dims(model_in, axis=0)
 model_in = preprocess_input(model_in)
 out = ptrn.predict_on_batch(model_in)[0]
 
-rectified_img = apply(img, np.concatenate((out, [1]), axis=0).reshape(3, 3))
+rectified_img = apply(img, out_to_matrix(out))
 cv.imwrite('rectified_'+img_name, rectified_img)
 
 region = np.ones((224, 224, 3), dtype='float32')
-region = draw_pts(region, np.concatenate((out, [1]), axis=0).reshape(3, 3))
+region = draw_pts(region, out_to_matrix(out))
 cv.imwrite('region_'+img_name, region)

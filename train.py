@@ -113,10 +113,9 @@ for i in range(1, max_epochs+1):
 	y = strn.predict_on_batch(tf.convert_to_tensor(preprocess_input(np.expand_dims(x_valid[0], axis=0))))[0]
 	try:
 		# cv.imwrite('plot/{:d}.jpg'.format(i), draw_pts(x_valid[0], y))
-		cv.imwrite('rectified_photograph_samples/{:d}.jpg'.format(i), apply(x_valid[0], np.concatenate((y, [1]), axis=0).reshape(3, 3)))
+		cv.imwrite('rectified_photograph_samples/{:d}.jpg'.format(i), apply(x_valid[0], out_to_matrix(y)))
 	except:
 		print('Cannot save the image.')
-	y = strn.predict_on_batch(preprocess_input(np.expand_dims(x_train[0], axis=0)))[0]
 
 	# plot a training sample.
 	try:
