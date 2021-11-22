@@ -19,7 +19,7 @@ Install the requirements with requirements.txt
   
 ### Train your own PTRN model
 
-1. Put the ground truth CXR region labels (in `labels/`) in the CheXphoto dataset.
+1. Use labelme.exe to mark the 4 vertices of each validation photographs in CheXphoto.
 2. Open train.py, fill in the path of your datasets (CheXphoto, MS COCO, etc.)
 3. `python train.py`
 
