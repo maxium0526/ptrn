@@ -47,6 +47,6 @@ In the paper, we split the CheXphoto validation set into two subsets (CheXphoto-
 | This code      	| **0.945**                     	| **0.932**             	|
 
 
-![螢幕擷取畫面 2021-11-22 170029](https://user-images.githubusercontent.com/38188772/142833946-99d1a506-5326-4f1b-be9e-66ea0cdd202a.png)
+![2021-11-22 170029](https://user-images.githubusercontent.com/38188772/142833946-99d1a506-5326-4f1b-be9e-66ea0cdd202a.png)
 
-![螢幕擷取畫面 2021-11-22 170429](https://user-images.githubusercontent.com/38188772/142833963-ff88cb89-5c3f-4350-b12c-db6d28a2dcab.png)
+![2021-11-22 170429](https://user-images.githubusercontent.com/38188772/142833963-ff88cb89-5c3f-4350-b12c-db6d28a2dcab.png)
