@@ -38,3 +38,15 @@ In the paper, we split the CheXphoto validation set into two subsets (CheXphoto-
 ### Use PTRN to rectify a CXR photograph
 
 1. `python use.py your_img_dir.jpg`
+
+### Experiment Result
+
+|                	| CheXphoto-Monitor (validation) 	| CheXphoto-Film (test) 	|
+|----------------	|--------------------------------	|-----------------------	|
+| Paper Reported 	| 0.942                          	| 0.892                 	|
+| This code      	| **0.945**                     	| **0.932**             	|
+
+
+![螢幕擷取畫面 2021-11-22 170029](https://user-images.githubusercontent.com/38188772/142833946-99d1a506-5326-4f1b-be9e-66ea0cdd202a.png)
+
+![螢幕擷取畫面 2021-11-22 170429](https://user-images.githubusercontent.com/38188772/142833963-ff88cb89-5c3f-4350-b12c-db6d28a2dcab.png)
