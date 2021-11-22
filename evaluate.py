@@ -1,6 +1,6 @@
 # the folder path of your CheXpert and CheXphoto datasets
 # e.g. your dataset is in /aaa/bbb/CheXpert-v1.0, then dataset_path='/aaa/bbb'
-dataset_path = '/home/max/datasets'
+dataset_path = ''
 
 ptrn_path = 'instances/best_iou.h5'
 
