@@ -25,12 +25,15 @@ Install the requirements with requirements.txt
 
 ### Evaluate your trained PTRN on CheXphoto-Monitor and CheXphoto-Film validation set
 
-In the paper, we split the CheXphoto validation set into two subsets (CheXphoto-Monitor and CheXphoto-Film). The split data is in `dataset_split` folder. Follow the steps to evaluate the PTRN.
+In the paper, we split the CheXphoto validation set into two subsets (CheXphoto-Monitor and CheXphoto-Film).
 
-1. Move `CheXphoto-natural` and `CheXphoto-film` folder in `dataset_split` to the same folder of your CheXphoto dataset is in.
-2. Then your dataset folder should contain these folders: `CheXphoto-v1.1`, `CheXphoto-natural`, `CheXphoto-film`
-3. Open evaluate.py, fill in the path of your datasets (CheXphoto)
-4. `python evaluate.py`
+1. Go the your dataset folder that contains your CheXphoto dataset.
+2. Create two new folders called `CheXphoto-natural` and `CheXphoto-film` respectively.
+3. Copy `CheXphoto-v1.1/valid.csv` to `CheXphoto-natural/valid.csv` and `CheXphoto-film/valid.csv` respectively.
+4. Open `CheXphoto-natural/valid.csv`, delete the unrelated rows. Only the 234 natural photographs is remained.
+5. Open `CheXphoto-film/valid.csv`, delete the unrelated rows. Only the 500 film photographs is remained.
+6. Open evaluate.py, fill in the path of your datasets.
+7. `python evaluate.py`
 
 ### Use PTRN to rectify a CXR photograph
 
