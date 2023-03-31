@@ -1,0 +1,34 @@
+{
+  "version": "4.5.6",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "cxr",
+      "points": [
+        [
+          3163.4137931034484,
+          1375.8620689655174
+        ],
+        [
+          3253.0689655172414,
+          3703.4482758620693
+        ],
+        [
+          391.0,
+          3700.0000000000005
+        ],
+        [
+          428.93103448275866,
+          1427.5862068965519
+        ]
+      ],
+      "group_id": null,
+      "shape_type": "polygon",
+      "flags": {}
+    }
+  ],
+  "imagePath": "view1_frontal.jpg",
+  "imageData": null,
+  "imageHeight": 4608,
+  "imageWidth": 3456
+}
