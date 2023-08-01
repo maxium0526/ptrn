@@ -1,10 +1,14 @@
 # Projective Transformation Rectification Network Official Implementation
 
-<https://arxiv.org/abs/2210.05954>
+### Paper
 
-### Abstract
+[Published Paper](https://doi.org/10.1016/j.compbiomed.2023.107277)
 
-Classification on smartphone-captured chest X-ray (CXR) photos to detect pathologies is challenging due to the projective transformation caused by the non-ideal camera position. Recently, various rectification methods have been proposed for different photo rectification tasks such as document photos, license plate photos, etc. Unfortunately, we found that none of them is suitable for CXR photos, due to their specific transformation type, image appearance, annotation type, etc. In this paper, we propose an innovative deep learning-based Projective Transformation Rectification Network (PTRN) to automatically rectify CXR photos by predicting the projective transformation matrix. To the best of our knowledge, it is the first work to predict the projective transformation matrix as the learning goal for photo rectification. Additionally, to avoid the expensive collection of natural data, synthetic CXR photos are generated under the consideration of natural perturbations, extra screens, etc. We evaluate the proposed approach in the CheXphoto smartphone-captured CXR photos classification competition hosted by the Stanford University Machine Learning Group, our approach won first place with a huge performance improvement (ours 0.850, second-best 0.762, in AUC). A deeper study demonstrates that the use of PTRN successfully achieves the classification performance on the spatially transformed CXR photos to the same level as on the high-quality digital CXR images, indicating PTRN can eliminate all negative impacts of projective transformation on the CXR photos.
+[Preprint](https://arxiv.org/abs/2210.05954)
+
+#### Image projective transformation rectification with synthetic data for smartphone-captured chest X-ray photos classification
+
+Automatic interpretation of chest X-ray (CXR) photos taken by smartphones at the same performance level as with digital CXRs is challenging, due to the projective transformation caused by the non-ideal camera position. Existing rectification methods for other camera-captured photos (document photos, license plate photos, etc.) cannot precisely rectify the projective transformation of CXR photos, due to its specific projective transformation type. In this paper, we propose an innovative deep learning-based Projective Transformation Rectification Network (PTRN) to automatically rectify the projective transformation of CXR photos by predicting the projective transformation matrix. Additionally, synthetic CXR photos are generated for training with the consideration of visual artifacts of natural images. The effectiveness of the proposed classification pipeline with PTRN is evaluated in the CheXphoto smartphone-captured CXR photo classification competition. It achieves first place with a huge performance improvement (ours 0.850, second-best 0.762, in AUC). Moreover, experimental results show that our approach successfully achieves the same performance level of digital CXR classification (AUC 0.893) on CXR photo classification (AUC 0.893).
 
 ![ptrn](https://user-images.githubusercontent.com/38188772/229279128-0da2e79c-4b10-4aff-81a6-19540e649682.png)
 
